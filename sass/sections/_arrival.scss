@@ -1,0 +1,37 @@
+.arrival {
+  padding-top: 5rem;
+
+  &__content {
+    // margin: 0 auto;
+    position: relative;
+    padding: 5rem;
+    columns: 35rem 2;
+    margin: 2rem;
+    margin-top: 0;
+    background-color: #e5e5e55c;
+    box-shadow: inset 0 0 0 3000px rgba(#e5e5e5, 0.7);
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(122, 122, 122, 0.9);
+      filter: blur(20px);
+      z-index: -1;
+    }
+
+    & h4 {
+      column-span: all;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 2rem;
+    }
+    & p {
+      margin-bottom: 1rem;
+    }
+
+    & p:last-child {
+      columns: 1;
+    }
+  }
+}

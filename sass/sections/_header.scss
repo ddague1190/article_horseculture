@@ -1,0 +1,44 @@
+.header {
+  position: absolute;
+  text-align: center;
+  @include coverer;
+
+  & img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  // &__video {
+  //   object-fit: contain;
+  //   // background: #a52a2a;
+  //   // @include coverer;
+  //   top: -300px;
+  //   left: 0;
+  //   position: fixed;
+  //   z-index: -1;
+  // }
+
+  &__text {
+    background-image: url(../img/flint-hills-4.jpeg);
+    margin: 0 auto;
+    font-size: 8rem;
+    position: absolute;
+    max-width: 60rem;
+    top: 5rem;
+    // width: 60rem;
+    // min-width: 30rem;
+    position: fixed;
+    // @include coverer;
+    line-height: 1;
+    font-weight: 900;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 10% 50%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: var(--headerOpacity);
+    transform: scale(var(--headerScale));
+  }
+}

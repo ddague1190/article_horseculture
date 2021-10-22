@@ -1,0 +1,40 @@
+.pictures {
+  margin: 0 auto;
+  display: grid;
+  position: relative;
+  width: 100%;
+  max-width: 80rem;
+  overflow: hidden;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "pic6 pic1 pic5"
+    "pic2 pic7 pic5"
+    "pic4 pic4 pic3";
+
+  & img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &::after {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(106, 43, 43, 0.5), white);
+    mix-blend-mode: multiply;
+  }
+}
+
+@for $i from 1 through 5 {
+  .pic#{$i} {
+    grid-area: unquote("pic" + $i);
+  }
+}
+
+.pic7 {
+  overflow: visible;
+  background-color: transparent;
+}
